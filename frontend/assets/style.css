@@ -1,0 +1,133 @@
+/* ── Synthera – Custom Streamlit Styles ── */
+
+:root {
+    --synthera-violet: #7c3aed;
+    --synthera-indigo: #4f46e5;
+    --synthera-cyan: #06b6d4;
+    --synthera-ink: #0b1020;
+    --synthera-slate: #1e293b;
+    --synthera-muted: #64748b;
+    --synthera-line: #e2e8f0;
+    --synthera-surface: #f8fafc;
+}
+
+/* Main container */
+.stApp {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+h1 {
+    background: linear-gradient(90deg, var(--synthera-violet), var(--synthera-indigo), var(--synthera-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    border-bottom: 3px solid var(--synthera-violet);
+    padding-bottom: 10px;
+}
+
+h2, h3 {
+    color: var(--synthera-slate);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: var(--synthera-surface);
+    border-right: 1px solid var(--synthera-line);
+}
+
+[data-testid="stSidebar"] h2 {
+    color: var(--synthera-slate);
+    font-size: 1.2rem;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background-color: #f3f0ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--synthera-indigo);
+    font-weight: 700;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--synthera-violet);
+}
+
+/* Buttons */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(90deg, var(--synthera-violet), var(--synthera-indigo));
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(90deg, var(--synthera-indigo), var(--synthera-cyan));
+}
+
+/* Text area */
+.stTextArea textarea {
+    border-radius: 10px;
+    border: 2px solid var(--synthera-line);
+    font-size: 1rem;
+}
+
+.stTextArea textarea:focus {
+    border-color: var(--synthera-violet);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+/* Report container */
+.report-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+    margin: 16px 0;
+}
+
+/* Citation cards */
+.citation-card {
+    background: var(--synthera-surface);
+    border-left: 3px solid var(--synthera-violet);
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Progress status */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-running { background: #ede9fe; color: #5b21b6; }
+.status-complete { background: #cffafe; color: #155e75; }
+.status-error { background: #fee2e2; color: #991b1b; }
+
+/* Expander */
+.streamlit-expanderHeader {
+    font-weight: 600;
+    color: var(--synthera-indigo);
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Synthera">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1b1140"/>
+    </linearGradient>
+    <linearGradient id="sgrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="0.5" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="sglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ssoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#sbg)"/>
+  <circle cx="128" cy="128" r="96" fill="url(#sglow)"/>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="none" stroke="url(#sgrad)" stroke-opacity="0.35" stroke-width="2"/>
+
+  <g stroke="url(#sgrad)" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <line x1="128" y1="128" x2="128" y2="58"/>
+    <line x1="128" y1="128" x2="188" y2="93"/>
+    <line x1="128" y1="128" x2="188" y2="163"/>
+    <line x1="128" y1="128" x2="128" y2="198"/>
+    <line x1="128" y1="128" x2="68" y2="163"/>
+    <line x1="128" y1="128" x2="68" y2="93"/>
+  </g>
+
+  <g fill="#06b6d4">
+    <circle cx="128" cy="58" r="11"/>
+    <circle cx="188" cy="93" r="11"/>
+    <circle cx="188" cy="163" r="11"/>
+    <circle cx="128" cy="198" r="11"/>
+    <circle cx="68" cy="163" r="11"/>
+    <circle cx="68" cy="93" r="11"/>
+  </g>
+
+  <circle cx="128" cy="128" r="24" fill="url(#sgrad)" filter="url(#ssoft)"/>
+  <circle cx="128" cy="128" r="9" fill="#0b1020" opacity="0.55"/>
+</svg>
