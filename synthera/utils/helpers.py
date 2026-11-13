@@ -5,7 +5,6 @@ from __future__ import annotations
 import re
 from datetime import datetime, timezone
 
-
 def truncate_text(text: str, max_chars: int = 5000) -> str:
     """Truncate text to a maximum character count, preserving word boundaries."""
     if len(text) <= max_chars:
